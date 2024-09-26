@@ -6,26 +6,10 @@ public class BalancoDiario {
 
     public void doAdd(Veiculo obj) {
         qtdeCarros++;
-
-
+        total = total + obj.doTotal();
     }
     public String doGerarRelatiorio() {
-        return "";
-    }
-
-    public static int getQtdeCarros() {
-        return qtdeCarros;
-    }
-
-    public static void setQtdeCarros(int qtdeCarros) {
-        BalancoDiario.qtdeCarros = qtdeCarros;
-    }
-
-    public static double getTotal() {
-        return total;
-    }
-
-    public static void setTotal(double total) {
-        BalancoDiario.total = total;
+        return "Quantidade de carros: " + qtdeCarros
+                + "\nValor total: " + total;
     }
 }

@@ -3,10 +3,14 @@ package Models;
 public class Veiculo {
     private double valorHora;
     private double valorAdicional;
-    private double horas = 2;
+    private double horas;
 
     public double doTotal() {
-        return valorHora + valorAdicional * (horas-1);
+        if(horas == 0) {
+            return 0;
+        } else {
+            return valorHora + valorAdicional * (horas - 1);
+        }
     }
     public String doViewCupom() {
         return "";
@@ -35,4 +39,6 @@ public class Veiculo {
     public void setHoras(double horas) {
         this.horas = horas;
     }
+
+
 }
